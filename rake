@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cd "`dirname "$0"`" && rake
+cd "`dirname "$0"`" && bundle exec rake
