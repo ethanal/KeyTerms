@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+
+\usepackage[letterpaper]{geometry}
+\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
+
+\usepackage{setspace}
+\doublespacing
+
+\usepackage{times}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{<%= config['last_name'] %> \thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength\headsep{0.30in}
+\setlength{\headheight}{14.5pt}
+
+\begin{document}
+\begin{flushleft}
+<%= config['first_name'] %> <%= config['last_name'] %> \\
+<%= config['teacher'] %> \\
+<%= config['class'] %> \\
+<%= date %> \\
+
+\begin{center}
+Chapter <%= chapter %> Key Terms
+\end{center}
+
+<% if terms.length > 0 %>
+    \begin{description}
+        <% terms.each do |term, page, definition| %>
+            \item[<%= term %>](p. <%= page %>): <%= definition %>
+        <% end %>
+    \end{description}
+<% end %>
+
+\end{flushleft}
+\end{document}
