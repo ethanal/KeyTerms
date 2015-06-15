@@ -18,7 +18,6 @@ task :generate_latex => ".export/csv" do
   sh "rm -f .export/tex/*"
 
   config = YAML.load_file("config.yml")
-  puts config
 
   Dir[".export/csv/*"].each do |csv_filename|
     m = /Chapter (?<chapter>\d+)-Chapter \d+ \((?<date>.*)\)/.match(csv_filename)
