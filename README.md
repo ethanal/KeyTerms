@@ -1,6 +1,6 @@
 # Key Terms
 
-This is a simple set of scripts that generates MLA-formatted key terms PDFs from a [Numbers](https://www.apple.com/mac/numbers/) spreadsheet. This depends on Ruby, Numbers, and Applescript.
+This is a simple set of scripts that generates MLA-formatted key terms PDFs from a [Numbers](https://www.apple.com/mac/numbers/) spreadsheet. This depends on Ruby, Numbers, Applescript, and LaTeX.
 
 ## Setup
 
